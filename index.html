@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>...</title>
+    <style type="text/css">
+    #container {
+        width: 1000px;
+        height: 400px;
+        position: relative;
+        background: rgb(252,254,252);
+    }
+    
+    #animate {
+        width: 350px;
+        height: 232px;
+        position: absolute;
+        background-image: url("images/charmander.gif");
+        background-size: cover;
+        background-position: left top;
+    }
+
+<body style="background-color:rgb(252,254,252)">
+    
+</style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="animate"></div>
+    </div>
+    <p>
+        <button onclick="Move()">START ANIMATION</button>
+    </p>
+    <script>
+    var id= setInterval(frame, 5);
+
+    function Move() {
+        var elem = document.getElementById("animate");
+        var pos = 0;
+        var id = setInterval(frame, 20);
+    
+
+    function frame() {
+
+        if (pos == 400) {
+            clearInterval(id);
+        }
+
+        else {
+            pos++;
+            elem.style.top = pos + 'px';
+            elem.style.left = pos + 'px';
+		}
+  }
+
+}
+    </script>
+</body>
+
+</html>
